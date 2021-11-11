@@ -1,3 +1,4 @@
+// Challenge 1
 greatestOfTwoNumbers = (a, b) => 
 {
     if (a > b)
@@ -7,11 +8,13 @@ greatestOfTwoNumbers = (a, b) =>
 }
 console.log(greatestOfTwoNumbers(2, 1));
   
-const arr = ['george', 'alice', 'alex', 'john', 'infanta', 'xavior', 'LourdhAntony'];
-findScaryWord = (arr) => 
+
+//Challenge 2
+const arr_word = ['george', 'alice', 'alex', 'john', 'infanta', 'xavior', 'LourdhAntony'];
+findScaryWord = (arr_word) => 
 {
     let max = '';
-    arr.forEach((word) => 
+    arr_word.forEach((word) => 
     {                                  
       if (word.length > max.length) 
       {
@@ -20,8 +23,10 @@ findScaryWord = (arr) =>
     });
     return max;
 }
-console.log(findScaryWord(arr));
+console.log(findScaryWord(arr_word));
   
+
+//Challenge 3
 const prices = [200, 100, 300, 400, 500, 700, 800, 900, 1200];
 sum = (prices) => 
 {
@@ -34,33 +39,34 @@ sum = (prices) =>
 }
 console.log(sum(prices));
   
-const arr = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
-avg = (arr) => 
+//Challenge 4
+const arr1 = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
+avg = (arr1) => 
 {
     let totalArray = 0;
-    for (i = 0; i < arr.length; i++) 
+    for (i = 0; i < arr1.length; i++) 
     {
-        if (typeof (arr[i]) == 'string' || typeof (arr[i]) == 'boolean') 
+        if (typeof (arr1[i]) == 'string' || typeof (arr1[i]) == 'boolean') 
         {
-            if (typeof (arr[i]) == 'string') 
+            if (typeof (arr1[i]) == 'string') 
             {                                             
-                totalArray += arr[i].length;
+                totalArray += arr1[i].length;
             }
             else 
             {
                 let temp;
-                temp = Number(arr[i]);
+                temp = Number(arr1[i]);
                 totalArray += temp;
             }
         }
         else 
         {
-            totalArray += arr[i];
+            totalArray += arr1[i];
         }
     }
     return totalArray;
 }
-console.log(avg(arr));
+console.log(avg(arr1));
   
   
 var array = [10, 20, 30, 40, 50, 60];
@@ -90,37 +96,42 @@ var averageWordLength = (items) =>
 };
 console.log(averageWordLength(items));
 
-const arr = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
-avg = (arr) => 
+const arr2 = [63, 122, 'audi', 61, true, 'volvo', '20', 'lamborghini', 38, 156];
+avg = (arr2) => 
 {
     let totalArray = 0;
-    for (i = 0; i < arr.length; i++)
+    for (i = 0; i < arr2.length; i++)
     {
-        if (typeof (arr[i]) == 'string' || typeof (arr[i]) == 'boolean') 
+        if (typeof (arr2[i]) == 'string' || typeof (arr2[i]) == 'boolean') 
         {
-            if (typeof (arr[i]) == 'string') 
+            if (typeof (arr2[i]) == 'string') 
             {                                             
-                totalArray += arr[i].length;
+                totalArray += arr2[i].length;
             }
             else 
             {
                 let temp;
-                temp = Number(arr[i]);
+                temp = Number(arr2[i]);
                 totalArray += temp;
             }
         }
         else 
         {
-            totalArray += arr[i];
+            totalArray += arr2[i];
         }
     }
     return totalArray;
 }
-console.log(avg(arr) / arr.length);
+console.log(avg(arr2) / arr2.length);
   
-var arr = ['bread', 'jam', 'milk', 'egg', 'flour', 'oil', 'rice', 'coffe powder', 'sugar', 'salt', 'egg', 'flour'];
-var unique = arr.filter((x, i) => arr.indexOf(x) === i);
-console.log(unique);          
+
+//Challenge 5
+var arr3 = ['bread', 'jam', 'milk', 'egg', 'flour', 'oil', 'rice', 'coffe powder', 'sugar', 'salt', 'egg', 'flour'];
+var unique = arr3.filter((x, i) => arr3.indexOf(x) === i);
+console.log(unique); 
+
+
+//challenge 6
 const alpha = ['door', 'window', 'ceiling', 'roof', 'plinth', 'tiles', 'ceiling', 'flooring'];
 var isPresent = alpha.filter(words => words == 'roof');
 checkval = () => 
@@ -135,6 +146,8 @@ checkval = () =>
     }
 }
 console.log(checkval());
+
+//Challenge 7
 const words = ['machine', 'matter', 'subset', 'troubling', 'starting', 'matter', 'eating', 'matter', 'truth', 'disobedience', 'matter'];
 occurence = (words) => 
 {
@@ -154,16 +167,16 @@ const multiplyFourNumbers = (a, b, c, d) =>
 {
     return a * b * c * d;
 }
-const maximumProduct = (arr) => 
+const maximumProduct = (arr3) => 
 {
     let maxProduct = 0;
-    for (let i = 0; i < arr.length; i++) 
+    for (let i = 0; i < arr3.length; i++) 
     {
-        for (let j = 0; j < arr.length; j++) 
+        for (let j = 0; j < arr3.length; j++) 
         {
             if ((j - 3) >= 0) 
             {
-                let product1 = multiplyFourNumbers(arr[i][j], arr[i][j - 1], arr[i][j - 2], arr[i][j - 3]);
+                let product1 = multiplyFourNumbers(arr3[i][j], arr3[i][j - 1], arr3[i][j - 2], arr3[i][j - 3]);
                 if (product1 > maxProduct) 
                 {
                     maxProduct = product1;
@@ -171,7 +184,7 @@ const maximumProduct = (arr) =>
             }
             if ((i - 3) >= 0) 
             {                                                                                   
-                let product2 = multiplyFourNumbers(arr[i][j], arr[i - 1][j], arr[i - 2][j], arr[i - 3][j]);
+                let product2 = multiplyFourNumbers(arr3[i][j], arr3[i - 1][j], arr3[i - 2][j], arr3[i - 3][j]);
                 if (product2 > maxProduct) 
                 {
                     maxProduct = product2;
@@ -181,6 +194,9 @@ const maximumProduct = (arr) =>
     }
     return maxProduct;
 }
+
+
+//Challenge 8
 const matrix = [[1, 2, 3, 4, 5],[1, 25, 3, 4, 5],[1, 20, 3, 4, 5],[1, 20, 3, 4, 5],[1, 4, 3, 4, 5]];
 console.log(maximumProduct(matrix));
 const maximunProductOfDiagonal = (arr) => 
@@ -211,4 +227,3 @@ const maximunProductOfDiagonal = (arr) =>
     return maxProduct;
 }
 console.log(maximunProductOfDiagonal(matrix));
-  
